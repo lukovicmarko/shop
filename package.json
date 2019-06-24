@@ -1,0 +1,120 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "nprogress": "^0.2.0",
+    "react": "^16.8.4",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-dates": "^20.1.0",
+    "react-dom": "^16.8.4",
+    "react-icons": "^3.7.0",
+    "react-modal": "^3.8.1",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "react-timeout": "^1.2.0",
+    "react-transition-group": "^2.5.3",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^3.4.9"
+  },
+  "homepage": "https://lukovicmarko.github.io/shop/",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "casual": "^1.5.19",
+    "enzyme-to-json": "^3.3.4",
+    "graphql-tools": "^4.0.0",
+    "jest": "^23.6.0",
+    "jest-transform-graphql": "^2.1.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql",
+      ".*": "babel-jest",
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
+  "//": "This is our babel config, I prefer this over a .babelrc file",
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "next/babel",
+            {
+              "preset-env": {
+                "modules": "commonjs"
+              }
+            }
+          ]
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
