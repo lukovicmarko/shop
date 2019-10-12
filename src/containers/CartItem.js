@@ -33,7 +33,7 @@ class CartItem extends Component {
                             <FaChevronCircleDown
                                 onClick={() => {
                                     if (product.Quantity === 1) {
-                                        const confirm = window.confirm('Are u sure you want to remove this phone from cart?');
+                                        const confirm = window.confirm('Are u sure you want to remove this product from cart?');
                                         if (confirm) {
                                             this.props.removeFromCart(product);
                                         } else {
